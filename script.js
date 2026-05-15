@@ -214,3 +214,31 @@ document.addEventListener('DOMContentLoaded', () => {
     initInfiniteZoom();
     initGalleryModal();
 });
+
+/* ============================================================
+   AUTOPLAY/PAUSE DE VIDEOS AL HACER SCROLL
+   ============================================================ */
+const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        const video = entry.target;
+
+        if (entry.isIntersecting) {
+            // Si el video entra en pantalla, se reproduce
+            video.play().catch(error => {
+                // El navegador puede bloquear el play automático si no está muteado
+                console.log("Autoplay bloqueado hasta interacción del usuario");
+            });
+        } else {
+            // Si el video sale de pantalla, se pausa
+            video.pause();
+        }
+    });
+}, { threshold: 0.2 }); // Se activa cuando el 20% del video es visible
+
+// Aplicar el observer a todos los videos de la página
+document.addEventListener('DOMContentLoaded', () => {
+    const allVideos = document.querySelectorAll('video');
+    allVideos.forEach(video => {
+        videoObserver.observe(video);
+    });
+});
