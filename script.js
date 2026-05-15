@@ -69,26 +69,14 @@ function initInfiniteZoom() {
     container.appendChild(renderer.domElement);
 
     const loader = new THREE.TextureLoader();
+    const layers = []; // Empezamos con la lista vacía
 
-    const layers = [
-        'zoom_images_bhc/0001.webp',
-        'zoom_images_bhc/0002.webp',
-        'zoom_images_bhc/0003.webp',
-        'zoom_images_bhc/0004.webp',
-        'zoom_images_bhc/0005.webp',
-        'zoom_images_bhc/0006.webp',
-        'zoom_images_bhc/0007.webp',
-        'zoom_images_bhc/0008.webp',
-        'zoom_images_bhc/0009.webp',
-        'zoom_images_bhc/0010.webp',
-        'zoom_images_bhc/0011.webp',
-        'zoom_images_bhc/0012.webp',
-        'zoom_images_bhc/0013.webp',
-        'zoom_images_bhc/0014.webp',
-        'zoom_images_bhc/0015.webp',
-        'zoom_images_bhc/0016.webp',
-        
-    ];
+    // Este bucle crea la lista de la 0001 a la 0052 automáticamente
+    for (let i = 1; i <= 52; i++) {
+        const fileName = i.toString().padStart(4, '0');
+    
+        layers.push(`zoom_images_bhc/${fileName}.webp`); 
+    }
 
     // Crear planos sin textura (placeholders transparentes)
     const planes = [];
