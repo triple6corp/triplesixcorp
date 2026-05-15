@@ -1,0 +1,525 @@
+:root {
+    --bg-color: #0d0d0d;
+    --accent-color: #ccff00;
+    --text-color: #ffffff;
+    --gray-dark: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    font-family: 'Rubik Mono One', sans-serif;
+    text-transform: uppercase;
+}
+
+/* ============================================================
+   NAVEGACIÓN
+   ============================================================ */
+.nav-urban {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 50px;
+    background: rgba(13, 13, 13, 0.95);
+    border-bottom: 2px solid var(--accent-color);
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 1rem;
+    color: var(--accent-color);
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+    text-shadow: 2px 2px #ff0055;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+    height: 100vh;
+    min-height: 500px;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 10px solid var(--gray-dark);
+}
+
+.glitch {
+    font-size: clamp(2rem, 8vw, 5rem); /* escala automática según ancho */
+    position: relative;
+    color: var(--accent-color);
+    word-break: break-word;
+}
+
+.subtitle {
+    margin-top: 16px;
+    font-size: clamp(0.65rem, 2.5vw, 1rem);
+    letter-spacing: 0.15em;
+    color: var(--text-color);
+    opacity: 0.7;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* ============================================================
+   SECCIONES
+   ============================================================ */
+.section {
+    padding: 80px 5%;
+}
+
+.bg-alt {
+    background-color: #111111;
+}
+
+.section-title {
+    font-size: clamp(1.2rem, 4vw, 2.5rem); /* escala automática */
+    margin-bottom: 40px;
+    display: inline-block;
+    border-left: 6px solid var(--accent-color);
+    padding-left: 12px;
+    word-break: break-word;
+}
+
+/* ============================================================
+   GALERÍA MASONRY
+   ============================================================ */
+.masonry-grid {
+    column-count: 3;
+    column-gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 10px;
+    width: 100%;
+}
+
+.grid-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 16px;
+    background: var(--gray-dark);
+    border: 1px solid #333;
+    transition: transform 0.3s;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.grid-item:hover {
+    transform: scale(1.02) rotate(1deg);
+    border-color: var(--accent-color);
+}
+
+.grid-item:hover img {
+    filter: grayscale(0%);
+}
+
+/* ============================================================
+   VIDEO
+   ============================================================ */
+.video-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #000;
+    padding: 8px;
+    position: relative;
+    background-image: radial-gradient(#1a1a1a 1px, transparent 1px);
+    background-size: 4px 4px;
+}
+
+.custom-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 15px rgba(204, 255, 0, 0.3);
+    filter: grayscale(20%) contrast(110%);
+    transition: filter 0.5s ease;
+}
+
+.custom-video:hover {
+    filter: grayscale(0%) contrast(100%);
+}
+
+/* ============================================================
+   VISOR 3D
+   ============================================================ */
+.model-box {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    aspect-ratio: 1 / 1;
+}
+
+model-viewer {
+    width: 100%;
+    height: 100%;
+    background-color: #6c6e6b;
+    --poster-color: transparent;
+}
+
+.ar-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ar-button:hover {
+    background: var(--accent-color);
+    color: #000;
+}
+
+/* ============================================================
+   galeria horizontal
+   ============================================================ */
+
+/* Oculta lo que se sale del contenedor */
+.gallery-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #1a1a1a; /* Color de fondo opcional */
+  padding: 20px 0;
+}
+
+/* La pista que se mueve */
+.gallery-track {
+  display: flex;
+  gap: 15px; /* Espacio entre cada imagen */
+  width: max-content;
+  /* Animación de 20 segundos, velocidad constante (linear), infinita */
+  animation: scrollGallery 20s linear infinite; 
+}
+
+/* ESTO ES LO QUE DETIENE LA GALERÍA CON EL MOUSE */
+.gallery-track:hover {
+  animation-play-state: paused;
+}
+
+/* Estilo de cada tarjeta/imagen */
+.gallery-item {
+  width: 400px; /*  cambiar el ancho */
+  aspect-ratio: 3 / 4; 
+  
+  
+  
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que la imagen llene el cuadro sin deformarse */
+}
+
+/* La animación de movimiento */
+@keyframes scrollGallery {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Se mueve la mitad de su tamaño total (el JS duplica el contenido) */
+    transform: translateX(-50%); 
+  }
+}
+
+/* ============================================================
+   CONTACTO
+   ============================================================ */
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 600px;
+}
+
+.contact-content p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.socials {
+    margin-top: 8px;
+    font-size: 0.9rem;
+}
+
+.socials a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.socials a:hover {
+    text-decoration: underline;
+}
+
+.btn-neon {
+    display: inline-block;
+    padding: 12px 24px;
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    text-decoration: none;
+    font-family: 'Permanent Marker', cursive;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.btn-neon:hover {
+    background: var(--accent-color);
+    color: #000;
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+/* ============================================================
+   MODAL / LIGHTBOX
+   ============================================================ */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    max-width: 95vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 0 25px rgba(204, 255, 0, 0.2);
+    animation: zoomIn 0.3s ease;
+}
+
+.close-modal {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    color: var(--accent-color);
+    font-size: 44px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    line-height: 1;
+}
+
+.close-modal:hover {
+    color: #fff;
+    text-shadow: 0 0 10px var(--accent-color);
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET (max 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+    .masonry-grid {
+        column-count: 2;
+    }
+
+    .model-box {
+        max-width: 90%;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — MÓVIL (max 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+    /* Nav compacto */
+    .nav-urban {
+        padding: 12px 16px;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding-top: 110px; /* más espacio por el nav en dos líneas */
+    }
+
+    /* Secciones */
+    .section {
+        padding: 60px 4%;
+    }
+
+    /* Galería de 1 columna */
+    .masonry-grid {
+        column-count: 1;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    /* Zoom viewport más pequeño en móvil */
+    #zoom-viewport {
+        height: 50vh !important;
+    }
+
+    /* Visor 3D ocupa todo el ancho */
+    .model-box {
+        max-width: 100%;
+    }
+
+    /* Botón neon más compacto */
+    .btn-neon {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Socials en columna */
+    .socials {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — MÓVIL PEQUEÑO (max 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 0.7rem;
+    }
+
+    .section {
+        padding: 50px 4%;
+    }
+
+    .section-title {
+        margin-bottom: 28px;
+    }
+
+    .video-container {
+        padding: 4px;
+    }
+}
+
+/* ============================================================
+   PANTALLA DE CARGA (PRELOADER)
+   ============================================================ */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color); /* El mismo fondo negro de tu web */
+    z-index: 9999; /* Por encima de la navegación y todo lo demás */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.6s ease; /* Para que se desvanezca suavemente */
+}
+
+/* El texto sobre el spinner */
+.glitch-load {
+    font-family: 'Rubik Mono One', sans-serif;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* El anillo giratorio de neón */
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(204, 255, 0, 0.1); /* Verde ácido transparente */
+    border-top-color: var(--accent-color); /* Verde ácido sólido */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    box-shadow: 0 0 15px rgba(204, 255, 0, 0.3); /* Resplandor */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Clase que aplicaremos con JavaScript para ocultar el preloader */
+.preloader-hidden {
+    opacity: 0;
+    pointer-events: none; /* Evita que estorbe al hacer clic una vez oculto */
+}

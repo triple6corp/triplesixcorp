@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIPLE6CORP | Digital Street Art</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto+Mono:wght@400;700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="TRIPLE6CORP — Digital Graffiti & Skate Culture. Arte urbano digital, modelos 3D y video.">
+    <meta name="keywords" content="graffiti digital, skate art, street art, 3D, Colombia">
+    <meta property="og:title" content="TRIPLE6CORP">
+    <meta property="og:description" content="Digital Graffiti & Skate Culture">
+    <meta property="og:url" content="https://triple6corp.netlify.app">
+</head>
+<body>
+    <div id="preloader">
+        <h2 class="glitch-load">TRIPLE6CORP</h2>
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="nav-urban">
+        <div class="logo">TRIPLE6CORP</div>
+        <ul class="nav-links">
+        
+            <li><a href="#contact">CONTACTO</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1 class="glitch" data-text="TRIPLE6CORP">TRIPLE6CORP</h1>
+        <p class="subtitle">DIGITAL GRAFFITI & SKATE CULTURE</p>
+        <p class="hero-text">Del asfalto al lienzo digital. Un laboratorio creativo donde el graffiti, El Skate, el ruido de la calle y el arte digital colisionan sin reglas ni filtros. Combinando la técnica de las artes digitales con la potencia de la programación, cada proyecto es un grito de rebelión contra la web tradicional...</p>
+    </header>
+
+     <!-- Sección de Video 00 -->
+    <section id="video-0" class="section bg-alt">
+        <h2 class="section-title">$I$AX_mixmedia</h2>
+        <div class="video-container">
+            <!-- ✅ FIX: id único para cada video -->
+            <video id="portfolioVideo00" loop controls class="custom-video">
+                <source src="web_videos/sisax_bhc.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+      </section>
+    <h2 class="section-title">SISAX_frames</h2>
+    <div class="gallery-container">
+  <div class="gallery-track" >
+     <div class="gallery-item">
+      <img src="web_images/sisax_01.png" alt="Imagen 1">
+    </div>
+    <div class="gallery-item">
+      <img src="web_images/sisax_02.png" alt="Imagen 2">
+    </div>
+    <div class="gallery-item">
+      <img src="web_images/sisax_03.png" alt="Imagen 3">
+    </div>
+    <div class="gallery-item">
+      <img src="web_images/sisax_04.png" alt="Imagen 4">
+    </div>
+    <div class="gallery-item">
+      <img src="web_images/sisax_05.png" alt="Imagen 5">
+    </div>
+  </div>
+</div>
+
+    <!-- Galería 01 -->
+    <section id="gallery" class="section">
+        <h2 class="section-title">TRUCK_BOMB</h2>
+        <div class="masonry-grid">
+            <div class="grid-item"><img src="web_images/truck_666_01.png" alt="Art"></div>
+            <div class="grid-item"><img src="web_images/truck_666_02.png" alt="Art"></div>
+            <div class="grid-item"><img src="web_images/truck_666_03.png" alt="Art"></div>
+            <div class="grid-item"><img src="web_images/truck_666_04.png" alt="Art"></div>
+        </div>
+    </section>
+
+    <!-- Sección de Zoom Interactivo -->
+    <section id="interactive-zoom" class="section">
+        <h2 class="section-title">mmw_roto_interactiva</h2>
+        <p style="margin-bottom: 20px; color: var(--accent-color);">[ USA EL SCROLL O DESLIZA EL DEDO PARA ENTRAR EN EL ARTE ]</p>
+        <div id="zoom-viewport" style="width: 100%; height: 70vh; background: #050505; border: 2px solid #333; position: relative; overflow: hidden;">
+        </div>
+    </section>
+
+    <!-- Sección de Video 01 -->
+    <section id="video" class="section bg-alt">
+        <h2 class="section-title">xploited_GOLD</h2>
+        <div class="video-container">
+            <!-- ✅ FIX: id único para cada video -->
+            <video id="portfolioVideo01" loop controls class="custom-video">
+                <source src="web_videos/Implosive_Quimbaya_head.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <!-- Galería 02 -->
+    <section id="gallery-2" class="section">
+        <h2 class="section-title">CLASSIC_WILD</h2>
+        <div class="masonry-grid">
+            <div class="grid-item"><img src="web_images/wild_666_01.png" alt="Art"></div>
+            <div class="grid-item"><img src="web_images/wild_666_02.png" alt="Art"></div>
+            <div class="grid-item"><img src="web_images/wild_666_03.png" alt="Art"></div>
+            <div class="grid-item"><img src="web_images/wild_666_04.png" alt="Art"></div>
+        </div>
+    </section>
+
+    <!-- Visor 3D 01 -->
+    <section id="3d" class="section">
+        <h2 class="section-title">666_3d_TAG</h2>
+        <div class="model-box">
+            <model-viewer
+                src="web_3d/666.glb"
+                poster="poster.webp"
+                alt="Un modelo 3D de TRIPLE6CORP"
+                auto-rotate
+                camera-controls
+                ar
+                shadow-intensity="1">
+                <button class="ar-button" slot="ar-button">☝ UN DEDO ROTA · DOS DEDOS MUEVE/ZOOM</button>
+            </model-viewer>
+        </div>
+    </section>
+
+    <!-- Sección de Video 02 -->
+    <section id="video-2" class="section bg-alt">
+        <h2 class="section-title">ICON_GOLD</h2>
+        <div class="video-container">
+            <!-- ✅ FIX: id único para cada video -->
+            <video id="portfolioVideo02" loop controls class="custom-video">
+                <source src="web_videos/ICON_GOLD.mp4" type="video/mp4">
+            </video>
+        </div>
+
+         
+    </section>
+    <h2 class="section-title">ICON_NBK</h2>
+    <div class="gallery-container">
+  <div class="gallery-track" >
+     <div class="gallery-item">
+      <img src="web_images/b5.png" alt="Imagen 1">
+    </div>
+    <div class="gallery-item">
+      <img src="web_images/BHC.png" alt="Imagen 2">
+    </div>
+    <div class="gallery-item">
+      <img src="web_images/b7.png" alt="Imagen 3">
+    </div>
+    <div class="gallery-item">
+      <img src="web_images/ICON.png" alt="Imagen 4">
+    </div>
+    <div class="gallery-item">
+      <img src="web_images/ICON_B.png" alt="Imagen 5">
+    </div>
+  </div>
+</div>
+
+    <!-- Visor 3D 02 -->
+    <section id="3d-2" class="section">
+        <h2 class="section-title">KARDY</h2>
+        <div class="model-box">
+            <model-viewer
+                src="web_3d/M4D4F4K4.glb"
+                poster="poster.webp"
+                alt="Un modelo 3D de TRIPLE6CORP"
+                auto-rotate
+                camera-controls
+                ar
+                shadow-intensity="1">
+                <button class="ar-button" slot="ar-button">☝ UN DEDO ROTA · DOS DEDOS ZOOM</button>
+            </model-viewer>
+        </div>
+    </section>
+
+    <!-- Sección de Video 03 -->
+    <section id="video-3" class="section bg-alt">
+        <h2 class="section-title">ROTO_BRA</h2>
+        <div class="video-container">
+
+            <video id="portfolioVideo03" loop controls class="custom-video">
+                <source src="web_videos/rotoscopia_skate01.mp4" type="video/mp4">
+            </video>
+        </div>
+
+
+    <!-- Visor 3D 03 -->
+    <section id="3d-3" class="section">
+        <h2 class="section-title">BRAGGY</h2>
+        <div class="model-box">
+            <model-viewer
+                src="web_3d/braggy.glb"
+                poster="poster.webp"
+                alt="Un modelo 3D de TRIPLE6CORP"
+                auto-rotate
+                camera-controls
+                ar
+                shadow-intensity="1">
+                <button class="ar-button" slot="ar-button">☝ UN DEDO ROTA · DOS DEDOS ZOOM</button>
+            </model-viewer>
+        </div>
+    </section>
+    <!-- Contacto -->
+    <footer id="contact" class="section">
+        <h2 class="section-title">CONTACTO</h2>
+        <div class="contact-content">
+            <p>¿Collab o commit?</p>
+            <a href="mailto:triple6corp@gmail.com" class="btn-neon">ENVIAR EMAIL</a>
+            <div class="socials">
+    <a href="https://www.instagram.com/triple6corp" target="_blank">INSTAGRAM</a> / 
+    <a href="https://www.behance.net/feliperiosg" target="_blank">BEHANCE</a> / 
+    <a href="https://www.artstation.com/feliperios" target="_blank">ARTSTATION</a>
+</div>
+        </div>
+    </footer>
+
+    <!-- ✅ FIX: Modal del lightbox agregado al HTML -->
+    <div id="image-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img" alt="Preview ampliado">
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
