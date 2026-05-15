@@ -233,7 +233,7 @@ const videoObserver = new IntersectionObserver((entries) => {
             video.pause();
         }
     });
-}, { threshold: 0.2 }); // Se activa cuando el 20% del video es visible
+}, { threshold: 0.1 }); // Se activa cuando el 10% del video es visible
 
 // Aplicar el observer a todos los videos de la página
 document.addEventListener('DOMContentLoaded', () => {
