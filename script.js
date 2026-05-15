@@ -87,22 +87,7 @@ function initInfiniteZoom() {
         'zoom_images_bhc/0014.webp',
         'zoom_images_bhc/0015.webp',
         'zoom_images_bhc/0016.webp',
-        'zoom_images/0017.png',
-        'zoom_images/0018.png',
-        'zoom_images/0019.png',
-        'zoom_images/0020.png',
-        'zoom_images/0021.png',
-        'zoom_images/0022.png',
-        'zoom_images/0023.png',
-        'zoom_images/0024.png',
-        'zoom_images/0025.png',
-        'zoom_images/0026.png',
-        'zoom_images/0027.png',
-        'zoom_images/0028.png',
-        'zoom_images/0029.png',
-        'zoom_images/0030.png',
-        'zoom_images/0031.png',
-        'zoom_images/0032.png'
+        
     ];
 
     // Crear planos sin textura (placeholders transparentes)
